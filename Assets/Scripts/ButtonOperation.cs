@@ -1,6 +1,5 @@
-using UnityEngine;
 using TMPro;
-using System;
+using UnityEngine;
 
 public class ButtonOperation : MonoBehaviour
 {
@@ -12,12 +11,12 @@ public class ButtonOperation : MonoBehaviour
 
     public void DoOperation()
     {
-        int operand1;
-        int operand2;
+        float operand1;
+        float operand2;
         float result;
 
-        int.TryParse(_inputOp1TMP.text, out operand1);
-        int.TryParse(_inputOp2TMP.text, out operand2);
+        float.TryParse(_inputOp1TMP.text, out operand1);
+        float.TryParse(_inputOp2TMP.text, out operand2);
 
 
         _operationViewTMP.text = ReturnOperationName(_operation);
@@ -32,7 +31,7 @@ public class ButtonOperation : MonoBehaviour
             return;
         }
 
-_textResultTMP.text = result.ToString();
+        _textResultTMP.text = result.ToString();
     }
 
     private string ReturnOperationName(Operations operation) => operation switch

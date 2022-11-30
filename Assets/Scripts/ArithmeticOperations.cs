@@ -2,18 +2,18 @@ using System;
 
 public static class ArithmeticOperations
 {
-    public static float ReturnSolution(int operand1, int operand2, Operations operation)
+    public static float ReturnSolution(float operand1, float operand2, Operations operation)
     {
         switch (operation)
         {
             case Operations.Plus:
-                return (float)operand1 + operand2;
+                return operand1 + operand2;
 
             case Operations.Minus:
-                return (float)operand1 - operand2;
+                return operand1 - operand2;
 
             case Operations.Multiply:
-                return (float)operand1 * operand2;
+                return operand1 * operand2;
 
             case Operations.Divide:
                 return operand1 / operand2;
